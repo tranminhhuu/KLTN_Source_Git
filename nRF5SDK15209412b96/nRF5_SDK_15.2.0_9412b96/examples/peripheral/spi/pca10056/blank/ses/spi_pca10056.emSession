@@ -1,0 +1,70 @@
+<!DOCTYPE CrossStudio_Session_File>
+<session>
+ <Bookmarks/>
+ <Breakpoints groups="Breakpoints" active_group="Breakpoints">
+  <BreakpointListItem trigger="" line="44" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="2" filename="../../../../../../integration/nrfx/legacy/nrf_drv_spi.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="45" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="2" filename="../../../../../../integration/nrfx/legacy/nrf_drv_spi.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="47" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="2" filename="../../../../../../modules/nrfx/drivers/include/nrfx_spim.h" useHWbreakpoint="false"/>
+ </Breakpoints>
+ <ExecutionProfileWindow/>
+ <FrameBufferWindow>
+  <FrameBufferWindow bufferHeight="-1" addressSpace="" addressText="" bufferWidth="-1"/>
+ </FrameBufferWindow>
+ <Memory1/>
+ <Memory2/>
+ <Memory3/>
+ <Memory4/>
+ <Project>
+  <ProjectSessionItem path="spi_pca10056"/>
+  <ProjectSessionItem path="spi_pca10056;spi_pca10056"/>
+  <ProjectSessionItem path="spi_pca10056;spi_pca10056;Application"/>
+  <ProjectSessionItem path="spi_pca10056;spi_pca10056;Board Definition"/>
+  <ProjectSessionItem path="spi_pca10056;spi_pca10056;nRF_Drivers"/>
+  <ProjectSessionItem path="spi_pca10056;spi_pca10056;nRF_Libraries"/>
+  <ProjectSessionItem path="spi_pca10056;spi_pca10056;nRF_Log"/>
+  <ProjectSessionItem path="spi_pca10056;spi_pca10056;nRF_Segger_RTT"/>
+ </Project>
+ <Register1/>
+ <Register2/>
+ <Register3/>
+ <Register4/>
+ <Threads>
+  <ThreadsWindow showLists=""/>
+ </Threads>
+ <TraceWindow>
+  <Trace enabled="Yes"/>
+ </TraceWindow>
+ <Watch1>
+  <Watches active="1" update="Never"/>
+ </Watch1>
+ <Watch2>
+  <Watches active="0" update="Never"/>
+ </Watch2>
+ <Watch3>
+  <Watches active="0" update="Never"/>
+ </Watch3>
+ <Watch4>
+  <Watches active="0" update="Never"/>
+ </Watch4>
+ <Files>
+  <SessionOpenFile windowGroup="DockEditLeft" x="27" y="84" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../main.c" selected="0" top="62" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="67" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../integration/nrfx/legacy/nrf_drv_spi.h" selected="0" top="46" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="27" y="125" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../integration/nrfx/legacy/nrf_drv_spi.c" selected="0" top="101" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="257" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../modules/nrfx/drivers/src/nrfx_spim.c" selected="1" top="241" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="147" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../modules/nrfx/drivers/include/nrfx_spi.h" selected="0" top="120" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="42" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../modules/nrfx/drivers/src/nrfx_spi.c" selected="0" top="31" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="810" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../integration/nrfx/legacy/apply_old_config.h" selected="0" top="783" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="1036" useTextEdit="1" useBinaryEdit="0" left="0" path="../config/sdk_config.h" selected="0" top="1016" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="43" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../../../nrf5SDKforMeshv310src/mesh/core/include/log.h" selected="0" top="33" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="55" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../../../nrf5SDKforMeshv310src/mesh/core/api/nrf_mesh_defines.h" selected="0" top="23" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="47" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../integration/nrfx/nrfx_log.h" selected="0" top="90" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="45" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../modules/nrfx/drivers/include/nrfx_spim.h" selected="0" top="41" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="17" useTextEdit="1" useBinaryEdit="0" left="0" path="../config/tqt_rfid.c" selected="0" top="10" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="15" useTextEdit="1" useBinaryEdit="0" left="0" path="../config/tqt_rfid.h" selected="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="137" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../components/libraries/button/app_button.c" selected="0" top="119" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="4" useTextEdit="1" useBinaryEdit="0" left="0" path="../config/mfrc522.h" selected="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="36" useTextEdit="1" useBinaryEdit="0" left="0" path="../config/mfrc522.c" selected="0" top="20" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="107" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../modules/nrfx/hal/nrf_gpio.h" selected="0" top="97" codecName="Default"/>
+ </Files>
+ <ARMCrossStudioWindow activeProject="spi_pca10056" fileDialogDefaultFilter="*.c" autoConnectTarget="J-Link" buildConfiguration="Release" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="E:/KLTN_Source_Git/nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/examples/peripheral/spi/pca10056/blank/config" debugSearchPath="" autoConnectCapabilities="3199"/>
+</session>
