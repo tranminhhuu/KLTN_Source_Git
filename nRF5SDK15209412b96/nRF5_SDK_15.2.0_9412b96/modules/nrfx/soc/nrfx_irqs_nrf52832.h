@@ -56,7 +56,7 @@ extern "C" {
 #define nrfx_prs_box_4_irq_handler  UARTE0_UART0_IRQHandler
 #else
 #define nrfx_uarte_0_irq_handler    UARTE0_UART0_IRQHandler
-#define nrfx_uart_0_irq_handler     UARTE0_UART0_IRQHandler
+//#define nrfx_uart_0_irq_handler     UARTE0_UART0_IRQHandler
 #endif
 
 // SPIM0_SPIS0_TWIM0_TWIS0_SPI0_TWI0_IRQn
