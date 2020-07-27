@@ -1,8 +1,7 @@
 build/light_switch_server_nrf52840_xxAA_s140_6.1.0_Debug/obj/hal.o: \
- H:\KLTN_Source_Git\nrf5SDKforMeshv310src\mesh\core\src\hal.c \
+ E:\KLTN_Source_Git\nrf5SDKforMeshv310src\mesh\core\src\hal.c \
  ../../../../nrf5SDKforMeshv310src/mesh/core/include/hal.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.30/include/stdint.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.30/include/stdbool.h \
+ E:/Project/SEGGER/include/stdint.h E:/Project/SEGGER/include/stdbool.h \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/modules/nrfx/mdk/nrf.h \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/modules/nrfx/mdk/nrf52840.h \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/toolchain/cmsis/include/core_cm4.h \

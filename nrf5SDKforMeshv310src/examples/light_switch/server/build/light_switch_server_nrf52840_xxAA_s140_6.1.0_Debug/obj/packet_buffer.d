@@ -1,11 +1,10 @@
 build/light_switch_server_nrf52840_xxAA_s140_6.1.0_Debug/obj/packet_buffer.o: \
- H:\KLTN_Source_Git\nrf5SDKforMeshv310src\mesh\core\src\packet_buffer.c \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.30/include/stdbool.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.30/include/string.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.30/include/__crossworks.h \
+ E:\KLTN_Source_Git\nrf5SDKforMeshv310src\mesh\core\src\packet_buffer.c \
+ E:/Project/SEGGER/include/stdbool.h E:/Project/SEGGER/include/string.h \
+ E:/Project/SEGGER/include/__crossworks.h \
  ../../../../nrf5SDKforMeshv310src/mesh/core/api/nrf_mesh_assert.h \
  ../../../../nrf5SDKforMeshv310src/mesh/core/api/nrf_mesh.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.30/include/stdint.h \
+ E:/Project/SEGGER/include/stdint.h \
  ../../../../nrf5SDKforMeshv310src/mesh/core/include/timer.h \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/softdevice/s140/headers/ble.h \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/softdevice/s140/headers/nrf_svc.h \
@@ -48,11 +47,11 @@ build/light_switch_server_nrf52840_xxAA_s140_6.1.0_Debug/obj/packet_buffer.o: \
  ../../../../nrf5SDKforMeshv310src/mesh/core/include/utils.h \
  ../../../../nrf5SDKforMeshv310src/mesh/core/include/hal.h \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/libraries/util/app_util.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.30/include/stddef.h \
+ E:/Project/SEGGER/include/stddef.h \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/modules/nrfx/mdk/compiler_abstraction.h \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/libraries/util/nordic_common.h \
  ../../../../nrf5SDKforMeshv310src/mesh/core/include/log.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.30/include/stdarg.h \
+ E:/Project/SEGGER/include/stdarg.h \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/libraries/util/nordic_common.h \
  ../../../../nrf5SDKforMeshv310src/mesh/core/api/nrf_mesh.h \
  ../../../../nrf5SDKforMeshv310src/mesh/core/include/utils.h \

@@ -1,10 +1,9 @@
 build/light_switch_server_nrf52832_xxAA_s132_6.1.0_Debug/obj/timeslot_timer.o: \
- H:\KLTN_Source_Git\nrf5SDKforMeshv310src\mesh\core\src\timeslot_timer.c \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.30/include/stddef.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.30/include/__crossworks.h \
+ E:\KLTN_Source_Git\nrf5SDKforMeshv310src\mesh\core\src\timeslot_timer.c \
+ E:/Project/SEGGER/include/stddef.h \
+ E:/Project/SEGGER/include/__crossworks.h \
  ../../../../nrf5SDKforMeshv310src/mesh/core/include/timeslot_timer.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.30/include/stdint.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.30/include/stdbool.h \
+ E:/Project/SEGGER/include/stdint.h E:/Project/SEGGER/include/stdbool.h \
  ../../../../nrf5SDKforMeshv310src/mesh/core/include/timer.h \
  ../../../../nrf5SDKforMeshv310src/mesh/core/include/bearer_event.h \
  ../../../../nrf5SDKforMeshv310src/mesh/core/include/timer_scheduler.h \
@@ -14,16 +13,16 @@ build/light_switch_server_nrf52832_xxAA_s132_6.1.0_Debug/obj/timeslot_timer.o: \
  ../../../../nrf5SDKforMeshv310src/mesh/core/include/queue.h \
  ../../../../nrf5SDKforMeshv310src/mesh/core/include/toolchain.h \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/modules/nrfx/mdk/nrf.h \
- ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/modules/nrfx/mdk/nrf52840.h \
+ ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/modules/nrfx/mdk/nrf52.h \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/toolchain/cmsis/include/core_cm4.h \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/toolchain/cmsis/include/core_cmInstr.h \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/toolchain/cmsis/include/cmsis_gcc.h \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/toolchain/cmsis/include/core_cmFunc.h \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/toolchain/cmsis/include/core_cmSimd.h \
- ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/modules/nrfx/mdk/system_nrf52840.h \
- ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/modules/nrfx/mdk/nrf52840_bitfields.h \
- ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/modules/nrfx/mdk/nrf51_to_nrf52840.h \
- ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/modules/nrfx/mdk/nrf52_to_nrf52840.h \
+ ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/modules/nrfx/mdk/system_nrf52.h \
+ ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/modules/nrfx/mdk/nrf52_bitfields.h \
+ ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/modules/nrfx/mdk/nrf51_to_nrf52.h \
+ ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/modules/nrfx/mdk/nrf52_name_change.h \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/modules/nrfx/mdk/compiler_abstraction.h \
  ../../../../nrf5SDKforMeshv310src/mesh/core/api/nrf_mesh_assert.h \
  ../../../../nrf5SDKforMeshv310src/mesh/core/api/nrf_mesh.h \

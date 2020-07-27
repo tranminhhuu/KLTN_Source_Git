@@ -1,5 +1,8 @@
 <!DOCTYPE CrossStudio_Project_File>
-<solution Name="light_switch_server_nrf52832_xxAA_s132_6.1.0" target="8" version="2">
+<solution
+  Name="light_switch_server_nrf52832_xxAA_s132_6.1.0"
+  target="8"
+  version="2">
   <project Name="light_switch_server_nrf52832_xxAA_s132_6.1.0">
     <configuration
       Name="Common"
@@ -15,10 +18,9 @@
       arm_simulator_memory_simulation_parameter="RWX 00000000,00100000,FFFFFFFF;RWX 20000000,00010000,CDCDCDCD"
       arm_target_device_name="nrf52832_xxAA"
       arm_target_interface_type="SWD"
-      c_preprocessor_definitions="NO_VTOR_CONFIG;USE_APP_CONFIG;CONFIG_APP_IN_CORE;NRF52_SERIES;NRF52840;NRF52840_XXAA;S140;SOFTDEVICE_PRESENT;NRF_SD_BLE_API_VERSION=6;BOARD_PCA10040;CONFIG_GPIO_AS_PINRESET"
-      c_user_include_directories="H:\\KLTN_Source_Git\\nRF5SDK15209412b96\\nRF5_SDK_15.2.0_9412b96\\modules;H:\\KLTN_Source_Git\\nRF5SDK15209412b96\\nRF5_SDK_15.2.0_9412b96\\modules\\nrfx;H:\\KLTN_Source_Git\\nRF5SDK15209412b96\\nRF5_SDK_15.2.0_9412b96\\modules\\nrfx\\hal;../../../../nrf5SDKforMeshv310src/examples/common/include;../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/modules/nrfx;../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/boards;../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/modules/nrfx/mdk;../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/toolchain/cmsis/include;../../../../nrf5SDKforMeshv310src/mesh/core/include;../../../../nrf5SDKforMeshv310src/mesh/prov/api;../../../../nrf5SDKforMeshv310src/mesh/core/api;../../../../nrf5SDKforMeshv310src/models/model_spec/generic_level/include;../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/libraries/util;../../../../nrf5SDKforMeshv310src/models/foundation/config/include;../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/libraries/delay;../../../../nrf5SDKforMeshv310src/mesh/access/api;../../../../nrf5SDKforMeshv310src/mesh/prov/include;../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/libraries/timer;../../../../nrf5SDKforMeshv310src/mesh/bearer/api;../../../../nrf5SDKforMeshv310src/mesh/dfu/api;../../../../nrf5SDKforMeshv310src/mesh/stack/api;../../../../nrf5SDKforMeshv310src/models/model_spec/common/include;../../../../nrf5SDKforMeshv310src/models/foundation/health/include;../../../../nrf5SDKforMeshv310src/examples/light_switch/include;../../../../nrf5SDKforMeshv310src/mesh/bearer/include;../../../../nrf5SDKforMeshv310src/models/model_spec/generic_onoff/include;../../../../nrf5SDKforMeshv310src/mesh/gatt/api;../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/softdevice/common;../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/ble/common;../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/libraries/experimental_section_vars;../../../../nrf5SDKforMeshv310src/external/rtt/include;../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/softdevice/s140/headers;../../../../nrf5SDKforMeshv310src/mesh/dfu/include;../../../../nrf5SDKforMeshv310src/mesh/gatt/include;../../../../nrf5SDKforMeshv310src/mesh/access/include;../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/libraries/log/src;../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/libraries/log;../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/libraries/strerror;../../../../nrf5SDKforMeshv310src/external/micro-ecc;../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/modules/nrfx/drivers/include;../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/integration/nrfx/legacy;../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/libraries/atomic;../../../../nrf5SDKforMeshv310src/examples/light_switch/server/include;../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/integration/nrfx;H:\\KLTN_Source_Git\\nRF5SDK15209412b96\\nRF5_SDK_15.2.0_9412b96\\components\\libraries\\uart;H:\\KLTN_Source_Git\\nRF5SDK15209412b96\\nRF5_SDK_15.2.0_9412b96\\modules\\nrfx\\hal;H:\\KLTN_Source_Git\\nRF5SDK15209412b96\\nRF5_SDK_15.2.0_9412b96\\components\\libraries\\fifo;H:\\KLTN_Source_Git\\nRF5SDK15209412b96\\nRF5_SDK_15.2.0_9412b96\\components\\libraries\\scheduler"
-      debug_additional_load_file="$(SDK_ROOT:../../../../nRF5_SDK_15.2.0_9412b96)/components/softdevice/s140/hex/s140_nrf52_6.1.0_softdevice.hex"
-      
+      c_preprocessor_definitions="NO_VTOR_CONFIG;USE_APP_CONFIG;CONFIG_APP_IN_CORE;NRF52_SERIES;NRF52832;NRF52832_XXAA;S132;SOFTDEVICE_PRESENT;NRF_SD_BLE_API_VERSION=6;BOARD_PCA10040;CONFIG_GPIO_AS_PINRESET"
+      c_user_include_directories="E:\\KLTN_Source_Git\\nRF5SDK15209412b96\\nRF5_SDK_15.2.0_9412b96\\modules ;E:\\KLTN_Source_Git\\nRF5SDK15209412b96\\nRF5_SDK_15.2.0_9412b96\\modules\\nrfx;E:\\KLTN_Source_Git\\nRF5SDK15209412b96\\nRF5_SDK_15.2.0_9412b96\\modules\\nrfx\\hal;../../../../nrf5SDKforMeshv310src/examples/common/include;../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/modules/nrfx;../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/boards;../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/modules/nrfx/mdk;../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/toolchain/cmsis/include;../../../../nrf5SDKforMeshv310src/mesh/core/include;../../../../nrf5SDKforMeshv310src/mesh/prov/api;../../../../nrf5SDKforMeshv310src/mesh/core/api;../../../../nrf5SDKforMeshv310src/models/model_spec/generic_level/include;../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/libraries/util;../../../../nrf5SDKforMeshv310src/models/foundation/config/include;../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/libraries/delay;../../../../nrf5SDKforMeshv310src/mesh/access/api;../../../../nrf5SDKforMeshv310src/mesh/prov/include;../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/libraries/timer;../../../../nrf5SDKforMeshv310src/mesh/bearer/api;../../../../nrf5SDKforMeshv310src/mesh/dfu/api;../../../../nrf5SDKforMeshv310src/mesh/stack/api;../../../../nrf5SDKforMeshv310src/models/model_spec/common/include;../../../../nrf5SDKforMeshv310src/models/foundation/health/include;../../../../nrf5SDKforMeshv310src/examples/light_switch/include;../../../../nrf5SDKforMeshv310src/mesh/bearer/include;../../../../nrf5SDKforMeshv310src/models/model_spec/generic_onoff/include;../../../../nrf5SDKforMeshv310src/mesh/gatt/api;../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/softdevice/common;../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/ble/common;../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/libraries/experimental_section_vars;../../../../nrf5SDKforMeshv310src/external/rtt/include;../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/softdevice/s140/headers;../../../../nrf5SDKforMeshv310src/mesh/dfu/include;../../../../nrf5SDKforMeshv310src/mesh/gatt/include;../../../../nrf5SDKforMeshv310src/mesh/access/include;../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/libraries/log/src;../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/libraries/log;../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/libraries/strerror;../../../../nrf5SDKforMeshv310src/external/micro-ecc;../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/modules/nrfx/drivers/include;../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/integration/nrfx/legacy;../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/libraries/atomic;../../../../nrf5SDKforMeshv310src/examples/light_switch/server/include;../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/integration/nrfx;E:\\KLTN_Source_Git\\nRF5SDK15209412b96\\nRF5_SDK_15.2.0_9412b96\\components\\libraries\\uart;E:\\KLTN_Source_Git\\nRF5SDK15209412b96\\nRF5_SDK_15.2.0_9412b96\\modules\\nrfx\\hal;E:\\KLTN_Source_Git\\nRF5SDK15209412b96\\nRF5_SDK_15.2.0_9412b96\\components\\libraries\\fifo;E:\\KLTN_Source_Git\\nRF5SDK15209412b96\\nRF5_SDK_15.2.0_9412b96\\components\\libraries\\scheduler;E:\\KLTN_Source_Git\\nrf5SDKforMeshv310src\\examples\\light_switch\\server\\src"
+      debug_additional_load_file="$(SDK_ROOT:../../../../nRF5_SDK_15.2.0_9412b96)/components/softdevice/s132/hex/s132_nrf52_6.1.0_softdevice.hex"
       debug_start_from_entry_point_symbol="No"
       debug_target_connection="J-Link"
       linker_output_format="hex"
@@ -28,9 +30,7 @@
       linker_section_placements_segments="FLASH RX 0x0 0x78000;RAM RWX 0x20000000 0xf000"
       macros="CMSIS_CONFIG_TOOL=$(SDK_ROOT:../../../../nRF5_SDK_15.2.0_9412b96)/external_tools/cmsisconfig/CMSIS_Configuration_Wizard.jar"
       project_directory=""
-      macros="CMSIS_CONFIG_TOOL=$(SDK_ROOT:../../../../nRF5_SDK_15.2.0_9412b96)/external_tools/cmsisconfig/CMSIS_Configuration_Wizard.jar"
       project_type="Executable" />
-
     <folder Name="Application">
       <file file_name="src/main.c" />
       <file file_name="../../common/src/app_onoff.c" />
@@ -47,6 +47,7 @@
       <file file_name="../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/boards/boards.c" />
       <file file_name="src/tqt_uart.c" />
       <file file_name="../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/libraries/scheduler/app_scheduler.c" />
+      <file file_name="src/app_simple_timer.c" />
     </folder>
     <folder Name="Core">
       <file file_name="../../../mesh/core/src/internal_event.c" />
@@ -139,7 +140,7 @@
       <file file_name="../../../external/rtt/src/SEGGER_RTT_printf.c" />
     </folder>
     <folder Name="uECC">
-      <file file_name="../../../external/micro-ecc/uECC.c" >
+      <file file_name="../../../external/micro-ecc/uECC.c">
         <configuration
           Name="Common"
           c_preprocessor_definitions="uECC_OPTIMIZATION_LEVEL=2;uECC_SUPPORTS_secp160r1=0;uECC_SUPPORTS_secp192r1=0;uECC_SUPPORTS_secp224r1=0;uECC_SUPPORTS_secp256r1=1;uECC_SUPPORTS_secp256k1=0;uECC_SUPPORT_COMPRESSED_POINT=0"
@@ -155,10 +156,10 @@
       <file file_name="../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/ble/common/ble_conn_params.c" />
       <file file_name="../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/libraries/atomic/nrf_atomic.c" />
       <file file_name="../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/ble/common/ble_srv_common.c" />
-      <file file_name="../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/modules/nrfx/mdk/system_nrf52840.c" />
+      <file file_name="../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/modules/nrfx/mdk/system_nrf52.c" />
       <file file_name="../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/libraries/util/app_error.c" />
       <file file_name="../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/libraries/util/app_error_handler_gcc.c" />
-      <file file_name="../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/modules/nrfx/mdk/ses_startup_nrf52840.s" />
+      <file file_name="../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/modules/nrfx/mdk/ses_startup_nrf52.s" />
       <file file_name="../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/modules/nrfx/mdk/ses_startup_nrf_common.s" />
       <file file_name="../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/ble/common/ble_advdata.c" />
       <file file_name="../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/modules/nrfx/drivers/src/nrfx_gpiote.c" />

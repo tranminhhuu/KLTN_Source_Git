@@ -114,12 +114,14 @@ void init_unlock_pin() {
 
 void door_unlock() {
     nrf_gpio_pin_set(UNLOCK_DOOR);
-    nrf_gpio_pin_set(LOCK_STATUS);
+//    nrf_gpio_pin_set(LOCK_STATUS);
+    nrf_gpio_pin_clear(LOCK_STATUS);
 }
 
 void door_lock() {
   nrf_gpio_pin_clear(UNLOCK_DOOR);
-  nrf_gpio_pin_clear(LOCK_STATUS);
+//  nrf_gpio_pin_clear(LOCK_STATUS);
+  nrf_gpio_pin_set(LOCK_STATUS);
 }
 
 //void active_unlock_pin() {

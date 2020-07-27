@@ -1,10 +1,9 @@
 build/light_switch_server_nrf52840_xxAA_s140_6.1.0_Debug/obj/nrf_mesh_prov.o: \
- H:\KLTN_Source_Git\nrf5SDKforMeshv310src\mesh\prov\src\nrf_mesh_prov.c \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.30/include/stdbool.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.30/include/string.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.30/include/__crossworks.h \
+ E:\KLTN_Source_Git\nrf5SDKforMeshv310src\mesh\prov\src\nrf_mesh_prov.c \
+ E:/Project/SEGGER/include/stdbool.h E:/Project/SEGGER/include/string.h \
+ E:/Project/SEGGER/include/__crossworks.h \
  ../../../../nrf5SDKforMeshv310src/mesh/core/api/nrf_mesh.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.30/include/stdint.h \
+ E:/Project/SEGGER/include/stdint.h \
  ../../../../nrf5SDKforMeshv310src/mesh/core/include/timer.h \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/softdevice/s140/headers/ble.h \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/softdevice/s140/headers/nrf_svc.h \
@@ -45,7 +44,7 @@ build/light_switch_server_nrf52840_xxAA_s140_6.1.0_Debug/obj/nrf_mesh_prov.o: \
  ../../../../nrf5SDKforMeshv310src/mesh/prov/api/nrf_mesh_prov_events.h \
  ../../../../nrf5SDKforMeshv310src/mesh/prov/api/nrf_mesh_prov_bearer.h \
  ../../../../nrf5SDKforMeshv310src/mesh/core/include/list.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.30/include/stddef.h \
+ E:/Project/SEGGER/include/stddef.h \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/softdevice/s140/headers/nrf_error.h \
  ../../../../nrf5SDKforMeshv310src/mesh/core/api/nrf_mesh_assert.h \
  ../../../../nrf5SDKforMeshv310src/mesh/core/api/nrf_mesh.h \
@@ -53,7 +52,7 @@ build/light_switch_server_nrf52840_xxAA_s140_6.1.0_Debug/obj/nrf_mesh_prov.o: \
  ../../../../nrf5SDKforMeshv310src/mesh/core/include/bitfield.h \
  ../../../../nrf5SDKforMeshv310src/mesh/core/include/toolchain.h \
  ../../../../nrf5SDKforMeshv310src/mesh/core/include/log.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.30/include/stdarg.h \
+ E:/Project/SEGGER/include/stdarg.h \
  ../../../../nrf5SDKforMeshv310src/mesh/core/api/nrf_mesh_config_core.h \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/libraries/util/nordic_common.h \
  ../../../../nrf5SDKforMeshv310src/mesh/prov/api/nrf_mesh_prov_bearer.h \

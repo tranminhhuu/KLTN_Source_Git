@@ -1,20 +1,20 @@
 build/light_switch_server_nrf52840_xxAA_s140_6.1.0_Debug/obj/rtt_input.o: \
- H:\KLTN_Source_Git\nrf5SDKforMeshv310src\examples\common\src\rtt_input.c \
+ E:\KLTN_Source_Git\nrf5SDKforMeshv310src\examples\common\src\rtt_input.c \
  ../../../../nrf5SDKforMeshv310src/examples/common/include/rtt_input.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.30/include/stdint.h \
+ E:/Project/SEGGER/include/stdint.h \
  ../../../../nrf5SDKforMeshv310src/examples/common/include/nrf_mesh_config_examples.h \
  ../../../../nrf5SDKforMeshv310src/examples/light_switch/server/include/nrf_mesh_config_app.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.30/include/stdlib.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.30/include/__crossworks.h \
+ E:/Project/SEGGER/include/stdlib.h \
+ E:/Project/SEGGER/include/__crossworks.h \
  ../../../../nrf5SDKforMeshv310src/external/rtt/include/SEGGER_RTT.h \
  ../../../../nrf5SDKforMeshv310src/external/rtt/include/SEGGER_RTT_Conf.h \
  ../../../../nrf5SDKforMeshv310src/mesh/core/api/nrf_mesh_defines.h \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/libraries/timer/app_timer.h \
  ../../../../nrf5SDKforMeshv310src/examples/light_switch/server/include/sdk_config.h \
  ../../../../nrf5SDKforMeshv310src/examples/light_switch/server/include/app_config.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.30/include/stdbool.h \
+ E:/Project/SEGGER/include/stdbool.h \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/libraries/util/app_error.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.30/include/stdio.h \
+ E:/Project/SEGGER/include/stdio.h \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/modules/nrfx/mdk/nrf.h \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/modules/nrfx/mdk/nrf52840.h \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/toolchain/cmsis/include/core_cm4.h \
@@ -32,7 +32,7 @@ build/light_switch_server_nrf52840_xxAA_s140_6.1.0_Debug/obj/rtt_input.o: \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/libraries/util/nordic_common.h \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/libraries/util/app_error_weak.h \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/libraries/util/app_util.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.30/include/stddef.h \
+ E:/Project/SEGGER/include/stddef.h \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/modules/nrfx/mdk/compiler_abstraction.h \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/libraries/util/nordic_common.h \
  ../../../../nrf5SDKforMeshv310src/examples/common/include/mesh_app_utils.h \

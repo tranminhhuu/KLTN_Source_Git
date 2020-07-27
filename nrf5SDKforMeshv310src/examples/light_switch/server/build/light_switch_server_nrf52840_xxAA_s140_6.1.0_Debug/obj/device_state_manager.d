@@ -1,8 +1,7 @@
 build/light_switch_server_nrf52840_xxAA_s140_6.1.0_Debug/obj/device_state_manager.o: \
- H:\KLTN_Source_Git\nrf5SDKforMeshv310src\mesh\access\src\device_state_manager.c \
+ E:\KLTN_Source_Git\nrf5SDKforMeshv310src\mesh\access\src\device_state_manager.c \
  ../../../../nrf5SDKforMeshv310src/mesh/access/api/device_state_manager.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.30/include/stdbool.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.30/include/stdint.h \
+ E:/Project/SEGGER/include/stdbool.h E:/Project/SEGGER/include/stdint.h \
  ../../../../nrf5SDKforMeshv310src/mesh/core/api/nrf_mesh.h \
  ../../../../nrf5SDKforMeshv310src/mesh/core/include/timer.h \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/softdevice/s140/headers/ble.h \
@@ -38,9 +37,9 @@ build/light_switch_server_nrf52840_xxAA_s140_6.1.0_Debug/obj/device_state_manage
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/softdevice/s140/headers/nrf_soc.h \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/softdevice/s140/headers/nrf_error_soc.h \
  ../../../../nrf5SDKforMeshv310src/mesh/core/include/toolchain.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.30/include/stddef.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.30/include/__crossworks.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.30/include/string.h \
+ E:/Project/SEGGER/include/stddef.h \
+ E:/Project/SEGGER/include/__crossworks.h \
+ E:/Project/SEGGER/include/string.h \
  ../../../../nrf5SDKforMeshv310src/mesh/core/api/nrf_mesh_defines.h \
  ../../../../nrf5SDKforMeshv310src/mesh/core/include/packet_mesh.h \
  ../../../../nrf5SDKforMeshv310src/mesh/core/include/nrf_mesh_keygen.h \
@@ -72,14 +71,14 @@ build/light_switch_server_nrf52840_xxAA_s140_6.1.0_Debug/obj/device_state_manage
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/libraries/experimental_section_vars/nrf_section.h \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/libraries/util/nordic_common.h \
  ../../../../nrf5SDKforMeshv310src/mesh/core/include/mesh_config_backend_file.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.30/include/stdlib.h \
+ E:/Project/SEGGER/include/stdlib.h \
  ../../../../nrf5SDKforMeshv310src/mesh/core/include/mesh_config_flashman_glue.h \
  ../../../../nrf5SDKforMeshv310src/mesh/core/api/flash_manager.h \
  ../../../../nrf5SDKforMeshv310src/mesh/core/include/packet_buffer.h \
  ../../../../nrf5SDKforMeshv310src/mesh/core/include/packet.h \
  ../../../../nrf5SDKforMeshv310src/mesh/core/include/utils.h \
  ../../../../nrf5SDKforMeshv310src/mesh/core/include/log.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.30/include/stdarg.h \
+ E:/Project/SEGGER/include/stdarg.h \
  ../../../../nrf5SDKforMeshv310src/mesh/core/include/queue.h \
  ../../../../nrf5SDKforMeshv310src/mesh/core/include/heartbeat.h \
  ../../../../nrf5SDKforMeshv310src/mesh/core/include/transport.h \

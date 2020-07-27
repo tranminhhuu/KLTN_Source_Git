@@ -1,10 +1,10 @@
 build/light_switch_server_nrf52840_xxAA_s140_6.1.0_Debug/obj/access_publish.o: \
- H:\KLTN_Source_Git\nrf5SDKforMeshv310src\mesh\access\src\access_publish.c \
+ E:\KLTN_Source_Git\nrf5SDKforMeshv310src\mesh\access\src\access_publish.c \
  ../../../../nrf5SDKforMeshv310src/mesh/access/include/access_publish.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.30/include/stdint.h \
+ E:/Project/SEGGER/include/stdint.h \
  ../../../../nrf5SDKforMeshv310src/mesh/access/api/access.h \
  ../../../../nrf5SDKforMeshv310src/mesh/access/api/device_state_manager.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.30/include/stdbool.h \
+ E:/Project/SEGGER/include/stdbool.h \
  ../../../../nrf5SDKforMeshv310src/mesh/core/api/nrf_mesh.h \
  ../../../../nrf5SDKforMeshv310src/mesh/core/include/timer.h \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/softdevice/s140/headers/ble.h \
@@ -40,8 +40,8 @@ build/light_switch_server_nrf52840_xxAA_s140_6.1.0_Debug/obj/access_publish.o: \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/softdevice/s140/headers/nrf_soc.h \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/softdevice/s140/headers/nrf_error_soc.h \
  ../../../../nrf5SDKforMeshv310src/mesh/core/include/toolchain.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.30/include/string.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.30/include/__crossworks.h \
+ E:/Project/SEGGER/include/string.h \
+ E:/Project/SEGGER/include/__crossworks.h \
  ../../../../nrf5SDKforMeshv310src/mesh/access/api/access_config.h \
  ../../../../nrf5SDKforMeshv310src/mesh/access/api/access.h \
  ../../../../nrf5SDKforMeshv310src/mesh/access/api/access_status.h \
@@ -50,7 +50,7 @@ build/light_switch_server_nrf52840_xxAA_s140_6.1.0_Debug/obj/access_publish.o: \
  ../../../../nrf5SDKforMeshv310src/mesh/core/include/timer_scheduler.h \
  ../../../../nrf5SDKforMeshv310src/mesh/core/api/nrf_mesh_config_core.h \
  ../../../../nrf5SDKforMeshv310src/mesh/core/include/queue.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.30/include/stddef.h \
+ E:/Project/SEGGER/include/stddef.h \
  ../../../../nrf5SDKforMeshv310src/mesh/core/api/nrf_mesh_assert.h \
  ../../../../nrf5SDKforMeshv310src/mesh/core/api/nrf_mesh.h \
  ../../../../nrf5SDKforMeshv310src/mesh/core/api/nrf_mesh_assert_gcc.h \

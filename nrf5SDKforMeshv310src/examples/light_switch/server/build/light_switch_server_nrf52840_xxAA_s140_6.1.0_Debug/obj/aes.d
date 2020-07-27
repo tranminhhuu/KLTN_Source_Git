@@ -1,6 +1,6 @@
 build/light_switch_server_nrf52840_xxAA_s140_6.1.0_Debug/obj/aes.o: \
- H:\KLTN_Source_Git\nrf5SDKforMeshv310src\mesh\core\src\aes.c \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.30/include/stdint.h \
+ E:\KLTN_Source_Git\nrf5SDKforMeshv310src\mesh\core\src\aes.c \
+ E:/Project/SEGGER/include/stdint.h \
  ../../../../nrf5SDKforMeshv310src/mesh/core/include/aes.h \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/softdevice/s140/headers/nrf_soc.h \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/modules/nrfx/mdk/nrf.h \

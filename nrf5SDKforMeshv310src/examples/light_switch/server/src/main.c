@@ -37,6 +37,7 @@
 
 #include <stdint.h>
 #include <string.h>
+#include "app_simple_timer.h"
 
 /* HAL */
 #include "boards.h"
@@ -91,6 +92,7 @@ static bool tqt_last_state = false;
 #define APP_SCHED_EVENT_SIZE                16                                                    /**< Maximum size of scheduler events. */
 #define APP_SCHED_QUEUE_SIZE                192  
                                                  /**< Maximum number of events in the scheduler queue. */
+#define PIN_TIMER                                                 APP_TIMER_TICKS(75)
 static bool m_device_provisioned;
 static bool message_from_remote = false;
 static bool get_new_message_from_remote = false;
@@ -100,8 +102,26 @@ static bool get_new_message_from_cloud = false;
 #define TQT_NEW_MODEL_2          (2)
 #define TQT_CONFIG_SERVER_NODE_RELAY          (1)
 #define TQT_CONFIG_SERVER_NODE_LOCK           (2)
+//#define TQT_CONFIG_SERVER_ROLE                (TQT_CONFIG_SERVER_NODE_RELAY)
 #define TQT_CONFIG_SERVER_ROLE                (TQT_CONFIG_SERVER_NODE_LOCK)
-
+// Adding Keypad S
+char input_pass[5]=""; 
+static char pin_key_map[4][4] ={{0x41,0x42,0x43,0x44},
+                               {0x03,0x06,0x09,'#'},
+                               {0x02,0x05,0x08,0x00},
+                               {0x01,0x04,0x07,'*'}};
+//static char pin_key_map[4][4] ={{'A','B','C','D'},
+//                               {'3','6','9','#'},
+//                               {'2','5','8','0'},
+//                               {'1','4','7','*'}};
+static uint8_t pin_check=0;
+static int countKey=0;
+//char pass[]="0206\0";
+char pass[] = {0x00,0x02,0x00,0x06,'\0'};
+int Keypad_on = 0;
+APP_TIMER_DEF(pin);
+int input_done = 0;
+// Adding Keypad E
 //tqt edit 12032019 start      
 #define TQT_SERVER_MODEL_LISTEN_MESH_STATUS_INDEX   (3)
 static void app_onoff_server_set_cb(const app_onoff_server_t * p_server, bool onoff);
@@ -454,13 +474,7 @@ static void models_init_cb(void)
     __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "Initializing and adding server models\n");
     app_model_init();
 }
-void delay_timer( int timeout)
-{
-int TimerStart=0;
-TimerStart= app_timer_cnt_get();
-while(app_timer_cnt_get()-TimerStart <=timeout);
-TimerStart=0;
-}
+
 static void mesh_init(void)
 {
 #if TQT_CONFIG_SERVER_ROLE == TQT_CONFIG_SERVER_NODE_LOCK
@@ -486,6 +500,21 @@ static void mesh_init(void)
 #endif
 }
 
+//adding checkpass
+//bool Check_Pass(void){
+//      int i = 0;
+//      int check_flag = 0;
+//      for(i;i < 4; i++){
+//        if(input_pass[0] != pass[0]){
+//          check_flag = 1;
+//      }
+//      if(check_flag == 1){
+//      return false;
+//      }
+//      return true;
+//}
+//adding checkpass
+
 /**
 *
 *   @brief: Button event handler
@@ -497,35 +526,39 @@ void in_pin_handler(nrfx_gpiote_pin_t button_number, nrf_gpiote_polarity_t actio
     generic_onoff_set_params_t set_params;
     model_transition_t transition_params;
     static uint8_t tid = 0;
-
+//    __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "BUTTON: \n", button_number);
     switch (button_number)
     {
         case BUTTON_3:
         {
-            
-            nrf_gpio_pin_clear(LED_3);
-            delay_timer(5000);
-            nrf_gpio_pin_set(LED_3);
-            
-            __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "BUTTON 3\n");
+//            __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "Pass: %d%d%d%d\n", input_pass[0], input_pass[1], input_pass[2], input_pass[3]);
+////            __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "Pass model: %d%d%d%d\n", pin_key_map[3][4], pin_key_map[3][1], pin_key_map[3][4], pin_key_map[2][2]);
+////            if((input_pass[0] == pin_key_map[3][4]) &&
+////            (input_pass[1] == pin_key_map[3][1]) &&
+////            (input_pass[2] == pin_key_map[3][4]) &&
+////            (input_pass[3] == pin_key_map[2][2])){
+//            if(memcmp(input_pass, pass, sizeof(input_pass)) == 0){
+//                __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "Pass OK\n");
+//            }else{
+//                __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "not OK\n");
+//            }
+//                __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "BUTTON 3\n");
+//            door_unlock();
+              __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "Keypad running!");
+              Keypad_on = 1;
             break;
         }
-      case BUTTON_4:
+
+        case BUTTON_4:
         {
-            __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "BUTTON 4\n");
-            break;
-        }
-        case BUTTON_1:
-        {
-            nrf_gpio_pin_toggle(LED_1);
-            __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "BUTTON 1\n");
+            __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "BUTTON 4");
             break;
         }
         /* Initiate node reset */
         case BUTTON_2:
         {
-        bsp_board_init(LED_2);
-        __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "BUTTON 2\n");
+// Test trigger Timer
+        __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "BUTTON 2");
             /* Clear all the states to reset the node. */
             if (mesh_stack_is_device_provisioned())
             {
@@ -539,12 +572,162 @@ void in_pin_handler(nrfx_gpiote_pin_t button_number, nrf_gpiote_polarity_t actio
             {
                 __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "The device is unprovisioned. Resetting has no effect.\n");
             }
+
+//              Keypad_on = 1;
+//              door_lock();
+// Test trigger Timer
             break;
         }
+//        case KEYPAD_ROW_1:
+//        {
+//            if (nrf_gpio_pin_read(30)==1){
+//              input_pass[countKey]= pin_key_map[3][0];
+//             // print_pass(countKey+48);
+//              countKey ++; 
+//              //NRF_LOG_INFO("1604  %d %d %d", 3-i, 0,input_pass[countKey-1]);
+//              nrf_delay_ms(50);
+//              pin_check=0;
+//               __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "Key 1 from Keypad\n");
+//               __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "Key 1 from Keypad\n");
+//               break;
+//          }  
+//        }
 
         default:
             break;
     }
+}
+
+// Adding keypad S
+bool button_is_push(void){
+//    __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "Check button ");
+    nrf_gpio_pin_clear(4);//output
+    nrf_gpio_pin_clear(3);
+    nrf_gpio_pin_clear(2);
+    nrf_gpio_pin_clear(31);
+    if ((nrf_gpio_pin_read(30)==0) || (nrf_gpio_pin_read(29)==0) || (nrf_gpio_pin_read(2)==0) || (nrf_gpio_pin_read(31)==0)){
+      return true;
+    }
+    return false;
+}
+
+void check_row(int i){
+//    __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "Check row button: ");
+    nrf_gpio_pin_set(4);//output
+    nrf_gpio_pin_set(3);
+    nrf_gpio_pin_set(2);
+    nrf_gpio_pin_set(31);  
+    nrf_delay_ms(5);
+    if (i==0){
+      nrf_gpio_pin_clear(4);
+      nrf_delay_ms(5);
+    }
+    else if(i==1){
+      nrf_gpio_pin_clear(3);
+      nrf_delay_ms(5);
+    }
+    else if(i==2){
+      nrf_gpio_pin_clear(2);
+      nrf_delay_ms(5);
+    }
+    else{
+      nrf_gpio_pin_clear(31);
+      nrf_delay_ms(5);
+    }
+}
+
+//static void keypad_pin_handler(){	
+static void keypad_pin_handler(void * p_context){	
+//static void keypad_pin_handler(nrfx_gpiote_pin_t button_number, nrf_gpiote_polarity_t action){	
+      //NRF_LOG_INFO("Pin scan");
+      //nrf_delay_ms(100);
+    //ret_code_t err_code;
+    UNUSED_PARAMETER(p_context);
+    //__LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "9oooo ");
+    if (button_is_push()){
+      nrf_delay_ms(10);
+      if (button_is_push()){
+        for (int i = 0;i<4;i++){
+          check_row(i);
+          if (nrf_gpio_pin_read(30)==0){
+            input_pass[countKey]= pin_key_map[3-i][0];
+           // print_pass(countKey+48);
+            countKey ++; 
+            //NRF_LOG_INFO("1604  %d %d %d", 3-i, 0,input_pass[countKey-1]);
+//            nrf_gpio_pin_set(12);
+//            nrf_delay_ms(50);
+//            nrf_gpio_pin_clear(12);
+//            pin_check=0;
+            __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "Pass: %d\n", input_pass[countKey-1]);
+          }
+          else if (nrf_gpio_pin_read(29)==0){
+            input_pass[countKey]= pin_key_map[3-i][1];
+           // print_pass(countKey+48);
+            countKey ++;
+            //NRF_LOG_INFO("1621  %d %d %d", 3-i, 1,input_pass[countKey-1]);
+//            nrf_gpio_pin_set(12);
+//            nrf_delay_ms(50);
+//            nrf_gpio_pin_clear(12);
+//            pin_check=0;
+             __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "Pass: %d\n", input_pass[countKey-1]);
+          }
+          else if (nrf_gpio_pin_read(28)==0){
+             input_pass[countKey]= pin_key_map[3-i][2];
+            // print_pass(countKey+48);
+             countKey ++;
+             //NRF_LOG_INFO("1628  %d %d %d", 3-i, 2,input_pass[countKey-1]);
+//             nrf_gpio_pin_set(12);
+//             nrf_delay_ms(50);
+//             nrf_gpio_pin_clear(12);
+//             pin_check=0;
+             __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "Pass: %d\n", input_pass[countKey-1]);
+          }
+          else if (nrf_gpio_pin_read(25)==0){
+              input_pass[countKey]= pin_key_map[3-i][3];
+            //  print_pass(countKey+48);
+              countKey ++;
+              //NRF_LOG_INFO("1635  %d %d %d", 3-i, 3,input_pass[countKey-1]);
+//              nrf_gpio_pin_set(12);
+//              nrf_delay_ms(50);
+//              nrf_gpio_pin_clear(12);
+//              pin_check=0;
+             __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "Pass: %d\n", input_pass[countKey-1]);
+          }  
+          else{
+//            nrf_delay_ms(50);
+          }
+//          __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "Input pass: ", input_pass);
+        }
+      }
+   }
+   if (countKey==4){
+        app_timer_stop(pin);
+        input_pass[countKey]='\0';
+        countKey = 0;
+        Keypad_on = 0;
+        input_done = 1;
+        __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "OK pass!\n");
+        }
+ }
+// Adding keypad E
+
+void keypad_init(){
+  nrf_gpio_cfg_output(4);
+  nrf_gpio_cfg_output(3);
+  nrf_gpio_cfg_output(2);
+  nrf_gpio_cfg_output(31);
+
+  nrf_gpio_cfg_output(12);
+
+  nrf_gpio_cfg_input(30,GPIO_PIN_CNF_PULL_Pullup);
+  nrf_gpio_cfg_input(29,GPIO_PIN_CNF_PULL_Pullup);
+  nrf_gpio_cfg_input(28,GPIO_PIN_CNF_PULL_Pullup);
+  nrf_gpio_cfg_input(25,GPIO_PIN_CNF_PULL_Pullup);
+  nrf_gpio_pin_clear(4);
+  nrf_gpio_pin_clear(3);
+  nrf_gpio_pin_clear(2);
+  nrf_gpio_pin_clear(31);
+  __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "Keypad OK\n");
 }
 
 static void tqt_gpiote_button_ext_init(nrfx_gpiote_pin_t pin_cfg)
@@ -555,6 +738,9 @@ static void tqt_gpiote_button_ext_init(nrfx_gpiote_pin_t pin_cfg)
     in_config.pull = NRF_GPIO_PIN_PULLUP;
 
     nrfx_gpiote_in_init(pin_cfg, &in_config, in_pin_handler);
+// adding Keypad
+//    nrfx_gpiote_in_init(pin_cfg, &in_config, keypad_pin_handler);
+// adding Keypad
     nrfx_gpiote_in_event_enable(pin_cfg, false);
     nrfx_gpiote_in_event_disable(pin_cfg);
     nrfx_gpiote_in_event_enable(pin_cfg, true);
@@ -568,13 +754,29 @@ void tqt_init_led()
     nrf_gpio_pin_clear(LED_4);
 }
 
+//void test_handler(void * p_context)
+//{  
+//                    bsp_board_led_invert(BSP_BOARD_LED_1);
+//}
+
 static void initialize(void)
 {
+    uint32_t err_code;
     __LOG_INIT(LOG_SRC_APP | LOG_SRC_ACCESS | LOG_SRC_BEARER, LOG_LEVEL_INFO, LOG_CALLBACK_DEFAULT);
     __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "----- BLE Mesh Light Switch Server Demo -----\n");
-
     ERROR_CHECK(app_timer_init());
+//    ERROR_CHECK( app_timer_create(&pin, APP_TIMER_MODE_REPEATED, keypad_pin_handler));
+//   err_code = app_timer_create(&pin, APP_TIMER_MODE_REPEATED, keypad_pin_handler);
+//    app_timer_create(&pin, APP_TIMER_MODE_REPEATED, test_handler);
+//    err_code = app_timer_start(pin, 50000, test_handler);
+    app_timer_create(&pin, APP_TIMER_MODE_REPEATED, keypad_pin_handler);
+//    err_code = app_timer_start(pin, 30000, keypad_pin_handler);
+//    APP_ERROR_CHECK(err_code);
+  //ERROR_CHECK( app_timer_start(pin, PIN_TIMER, NULL));
+   
 
+//    app_simple_timer_start(1, keypad_pin_handler, 50000 , NULL);
+    //app_simple_timer_start(1, keypad_pin_handler, 50000, NULL);
 #if BUTTON_BOARD
     ERROR_CHECK(hal_buttons_init(button_event_handler));
 #endif
@@ -584,7 +786,7 @@ static void initialize(void)
     tqt_gpiote_button_ext_init(BUTTON_3);
     tqt_gpiote_button_ext_init(BUTTON_4);
     tqt_gpiote_button_ext_init(BUTTON_2);
-
+//    tqt_gpiote_button_ext_init(KEYPAD_ROW_1);
     ble_stack_init();
     #if MESH_FEATURE_GATT_ENABLED
     gap_params_init();
@@ -635,11 +837,14 @@ void check_ID() {
 
 int main(void)
 { 
+    uint32_t err_code;
     initialize();
+    keypad_init();
     start();
 #if TQT_CONFIG_SERVER_ROLE == TQT_CONFIG_SERVER_NODE_LOCK
     APP_SCHED_INIT(APP_SCHED_EVENT_SIZE, APP_SCHED_QUEUE_SIZE);
     tqt_init_uart();
+    __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "Uart OK\n");
     init_unlock_pin();
 #endif
     for (;;)
@@ -648,33 +853,61 @@ int main(void)
       app_sched_execute();
       bool done = nrf_mesh_process();
       if (done){
-          if(RECEIVE_RFID_DATA_OK == true) {
-            if(strstr(ID_of_card,"+TAG:1")) {
-                  tqt_send_string(READ_ID);
-                  __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "AT COMMAND\n");
-                  memset(ID_of_card,'\0',sizeof(ID_of_card));
-                  RECEIVE_RFID_DATA_OK = false;
-                  continue;
-            } else if (strstr(ID_of_card,"+TAG:0")) {
-                  __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "TAG 0\n");
-                  memset(ID_of_card,'\0',sizeof(ID_of_card));
-                  RECEIVE_RFID_DATA_OK = false;
-                  continue;
-            } else if((strstr(ID_of_card,"ID:494AAE8E")) || (strstr(ID_of_card,"ID:50E7891E"))) {
-                  door_unlock();
-                  tqt_send_state_to_provisioner(true);
-                  __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "OPEN\n");
-                  memset(ID_of_card,'\0',sizeof(ID_of_card));
-                  RECEIVE_RFID_DATA_OK = false;
-                  continue;
-            } else {
-                  door_lock();
-                  tqt_send_state_to_provisioner(false);
-                  __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "CLOSE\n");
-                  memset(ID_of_card,'\0',sizeof(ID_of_card));
-                  RECEIVE_RFID_DATA_OK = false;
-                  continue;
+// Keypad Function
+//          keypad_pin_handler();
+          if(Keypad_on == 1){    
+              err_code = app_timer_start(pin, 30000, keypad_pin_handler);
+              APP_ERROR_CHECK(err_code);
+          }
+          if( input_done == 1){
+            __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "Pass: %d%d%d%d\n", input_pass[0], input_pass[1], input_pass[2], input_pass[3]);
+//            __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "Pass model: %d%d%d%d\n", pin_key_map[3][4], pin_key_map[3][1], pin_key_map[3][4], pin_key_map[2][2]);
+//            if((input_pass[0] == pin_key_map[3][4]) &&
+//            (input_pass[1] == pin_key_map[3][1]) &&
+//            (input_pass[2] == pin_key_map[3][4]) &&
+//            (input_pass[3] == pin_key_map[2][2])){
+            if(memcmp(input_pass, pass, sizeof(input_pass)) == 0){
+                __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "Pass OK\n");
+                input_done = 0;
+                 door_unlock();
+                 tqt_send_state_to_provisioner(true);
+            }else{
+                __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "Pass not OK\n");
+                input_done = 0;
+                 door_lock();
+                 tqt_send_state_to_provisioner(false);
             }
+//                __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "BUTTON 3\n");
+          }
+
+//          if(RECEIVE_RFID_DATA_OK == true) {
+//            if(strstr(ID_of_card,"+TAG:1")) {
+//                  tqt_send_string(READ_ID);
+//                  __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "AT COMMAND\n");
+//                  memset(ID_of_card,'\0',sizeof(ID_of_card));
+//                  RECEIVE_RFID_DATA_OK = false;
+//                  continue;
+//            } else if (strstr(ID_of_card,"+TAG:0")) {
+//                  __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "TAG 0\n");
+//                  memset(ID_of_card,'\0',sizeof(ID_of_card));
+//                  RECEIVE_RFID_DATA_OK = false;
+//                  continue;
+//            } else if((strstr(ID_of_card,"ID:494AAE8E")) || (strstr(ID_of_card,"ID:50E7891E"))) {
+//                  door_unlock();
+//                  tqt_send_state_to_provisioner(true);
+//                  __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "OPEN\n");
+//                  memset(ID_of_card,'\0',sizeof(ID_of_card));
+//                  RECEIVE_RFID_DATA_OK = false;
+//                  continue;
+//            } else {
+//                  door_lock();
+//                  tqt_send_state_to_provisioner(false);
+//                  __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "CLOSE\n");
+//                  memset(ID_of_card,'\0',sizeof(ID_of_card));
+//                  RECEIVE_RFID_DATA_OK = false;
+//                  continue;
+//            }
+// Keypad Function
           } else if (message_from_cloud == true) {
               __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "New Request From Cloud To Door: %d ---- Count Package: %d\n", get_new_message_from_cloud, tqt_count_package);
               if(get_new_message_from_cloud) {
@@ -710,5 +943,5 @@ int main(void)
 #elif TQT_CONFIG_SERVER_ROLE == TQT_CONFIG_SERVER_NODE_RELAY
      (void)sd_app_evt_wait();
 #endif
-   }
+        (void)sd_app_evt_wait();
 }

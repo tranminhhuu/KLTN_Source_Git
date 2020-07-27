@@ -1,10 +1,9 @@
 build/light_switch_server_nrf52840_xxAA_s140_6.1.0_Debug/obj/assertion_handler_weak.o: \
- H:\KLTN_Source_Git\nrf5SDKforMeshv310src\examples\common\src\assertion_handler_weak.c \
+ E:\KLTN_Source_Git\nrf5SDKforMeshv310src\examples\common\src\assertion_handler_weak.c \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/libraries/util/app_error.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.30/include/stdint.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.30/include/stdio.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.30/include/__crossworks.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.30/include/stdbool.h \
+ E:/Project/SEGGER/include/stdint.h E:/Project/SEGGER/include/stdio.h \
+ E:/Project/SEGGER/include/__crossworks.h \
+ E:/Project/SEGGER/include/stdbool.h \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/modules/nrfx/mdk/nrf.h \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/modules/nrfx/mdk/nrf52840.h \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/toolchain/cmsis/include/core_cm4.h \

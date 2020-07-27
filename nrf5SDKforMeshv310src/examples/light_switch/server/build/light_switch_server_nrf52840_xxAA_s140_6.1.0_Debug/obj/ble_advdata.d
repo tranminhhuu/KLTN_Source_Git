@@ -1,10 +1,9 @@
 build/light_switch_server_nrf52840_xxAA_s140_6.1.0_Debug/obj/ble_advdata.o: \
- H:\KLTN_Source_Git\nRF5SDK15209412b96\nRF5_SDK_15.2.0_9412b96\components\ble\common\ble_advdata.c \
- H:\KLTN_Source_Git\nRF5SDK15209412b96\nRF5_SDK_15.2.0_9412b96\components\ble\common\ble_advdata.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.30/include/stdint.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.30/include/stdbool.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.30/include/string.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.30/include/__crossworks.h \
+ E:\KLTN_Source_Git\nRF5SDK15209412b96\nRF5_SDK_15.2.0_9412b96\components\ble\common\ble_advdata.c \
+ E:\KLTN_Source_Git\nRF5SDK15209412b96\nRF5_SDK_15.2.0_9412b96\components\ble\common\ble_advdata.h \
+ E:/Project/SEGGER/include/stdint.h E:/Project/SEGGER/include/stdbool.h \
+ E:/Project/SEGGER/include/string.h \
+ E:/Project/SEGGER/include/__crossworks.h \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/softdevice/s140/headers/ble.h \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/softdevice/s140/headers/nrf_svc.h \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/softdevice/s140/headers/nrf_error.h \
@@ -38,11 +37,11 @@ build/light_switch_server_nrf52840_xxAA_s140_6.1.0_Debug/obj/ble_advdata.o: \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/libraries/util/sdk_errors.h \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/softdevice/s140/headers/nrf_error.h \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/libraries/util/app_util.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.30/include/stddef.h \
+ E:/Project/SEGGER/include/stddef.h \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/libraries/util/sdk_macros.h \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/libraries/util/nrf_assert.h \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/softdevice/s140/headers/ble_gap.h \
- H:\KLTN_Source_Git\nRF5SDK15209412b96\nRF5_SDK_15.2.0_9412b96\components\ble\common\ble_srv_common.h \
+ E:\KLTN_Source_Git\nRF5SDK15209412b96\nRF5_SDK_15.2.0_9412b96\components\ble\common\ble_srv_common.h \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/softdevice/s140/headers/ble_types.h \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/libraries/util/app_util.h \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/softdevice/s140/headers/ble_gatt.h

@@ -2,13 +2,10 @@
 <session>
  <Bookmarks/>
  <Breakpoints groups="Breakpoints" active_group="Breakpoints">
-  <BreakpointListItem trigger="" line="169" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="2" filename="../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/libraries/uart/app_uart_fifo.c" useHWbreakpoint="false"/>
-  <BreakpointListItem trigger="" line="173" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/libraries/uart/app_uart_fifo.c" useHWbreakpoint="false"/>
-  <BreakpointListItem trigger="" line="648" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="src/main.c" useHWbreakpoint="false"/>
-  <BreakpointListItem trigger="" line="566" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/integration/nrfx/legacy/nrf_drv_uart.h" useHWbreakpoint="false"/>
-  <BreakpointListItem trigger="" line="579" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="2" filename="../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/integration/nrfx/legacy/nrf_drv_uart.h" useHWbreakpoint="false"/>
-  <BreakpointListItem trigger="" line="389" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="../../../mesh/core/src/nrf_mesh.c" useHWbreakpoint="false"/>
-  <BreakpointListItem trigger="" line="346" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/modules/nrfx/drivers/src/nrfx_uarte.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="66" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="2" filename="../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/boards/custom_board.h" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="656" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="2" filename="src/main.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="738" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="src/main.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="769" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="2" filename="src/main.c" useHWbreakpoint="false"/>
  </Breakpoints>
  <ExecutionProfileWindow/>
  <FrameBufferWindow>
@@ -33,11 +30,11 @@
   <ProjectSessionItem path="light_switch_server_nrf52832_xxAA_s132_6.1.0;light_switch_server_nrf52832_xxAA_s132_6.1.0;Bearer"/>
   <ProjectSessionItem path="light_switch_server_nrf52832_xxAA_s132_6.1.0;light_switch_server_nrf52832_xxAA_s132_6.1.0;Configuration Model"/>
   <ProjectSessionItem path="light_switch_server_nrf52832_xxAA_s132_6.1.0;light_switch_server_nrf52832_xxAA_s132_6.1.0;Core"/>
-  <ProjectSessionItem path="light_switch_server_nrf52832_xxAA_s132_6.1.0;light_switch_server_nrf52832_xxAA_s132_6.1.0;GATT"/>
+  <ProjectSessionItem path="light_switch_server_nrf52832_xxAA_s132_6.1.0;light_switch_server_nrf52832_xxAA_s132_6.1.0;Generic OnOff Model"/>
+  <ProjectSessionItem path="light_switch_server_nrf52832_xxAA_s132_6.1.0;light_switch_server_nrf52832_xxAA_s132_6.1.0;Health Model"/>
   <ProjectSessionItem path="light_switch_server_nrf52832_xxAA_s132_6.1.0;light_switch_server_nrf52832_xxAA_s132_6.1.0;Mesh stack"/>
   <ProjectSessionItem path="light_switch_server_nrf52832_xxAA_s132_6.1.0;light_switch_server_nrf52832_xxAA_s132_6.1.0;nRF5 SDK"/>
   <ProjectSessionItem path="light_switch_server_nrf52832_xxAA_s132_6.1.0;light_switch_server_nrf52832_xxAA_s132_6.1.0;Other"/>
-  <ProjectSessionItem path="light_switch_server_nrf52832_xxAA_s132_6.1.0;light_switch_server_nrf52832_xxAA_s132_6.1.0;Provisioning"/>
  </Project>
  <Register1>
   <RegisterWindow visibleNodes="CPU - Current Context/r0;CPU - Current Context/r1;CPU - Current Context/r2;CPU - Current Context/r3;CPU - Current Context/r4;CPU - Current Context/r5;CPU - Current Context/r6;CPU - Current Context/r7;CPU - Current Context/r8;CPU - Current Context/r9;CPU - Current Context/r10;CPU - Current Context/r11;CPU - Current Context/r12;CPU - Current Context/sp(r13);CPU - Current Context/lr(r14);CPU - Current Context/pc(r15);CPU - Current Context/apsr;CPU/r0;CPU/r1;CPU/r2;CPU/r3;CPU/r4;CPU/r5;CPU/r6;CPU/r7;CPU/r8;CPU/r9;CPU/r10;CPU/r11;CPU/r12;CPU/sp(r13);CPU/lr(r14);CPU/pc(r15);CPU/xpsr;CPU/msp;CPU/psp;CPU/cfbp;CPU/internal" binaryNodes="" asciiNodes="" openNodes="CPU - Current Context" name="light_switch_server_nrf52832_xxAA_s132_6.1.0" decimalNodes="" octalNodes="" unsignedNodes=""/>
@@ -70,33 +67,24 @@
   <Watches active="0" update="Never"/>
  </Watch4>
  <Files>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../doc/getting_started/SES.md" selected="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="506" useTextEdit="1" useBinaryEdit="0" left="0" path="src/main.c" selected="1" top="39" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="51" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../mesh/gatt/src/mesh_gatt.c" selected="0" top="22" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="371" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../mesh/prov/src/nrf_mesh_prov_bearer_gatt.c" selected="0" top="349" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="174" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/softdevice/s140/headers/ble_gap.h" selected="0" top="153" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="182" useTextEdit="1" useBinaryEdit="0" left="0" path="../../common/src/mesh_adv.c" selected="0" top="164" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="181" useTextEdit="1" useBinaryEdit="0" left="0" path="../../common/src/ble_softdevice_support.c" selected="0" top="177" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="174" useTextEdit="1" useBinaryEdit="0" left="0" path="include/nrf_mesh_config_app.h" selected="0" top="91" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="56" useTextEdit="1" useBinaryEdit="0" left="0" path="src/tqt_uart.c" selected="0" top="38" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="74" useTextEdit="1" useBinaryEdit="0" left="0" path="../../common/src/app_error_weak.c" selected="0" top="63" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="139" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../mesh/stack/src/mesh_stack.c" selected="0" top="119" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="386" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../mesh/core/src/nrf_mesh.c" selected="0" top="370" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="51" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/boards/custom_board.h" selected="0" top="41" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="146" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/libraries/uart/app_uart.h" selected="0" top="124" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="25" useTextEdit="1" useBinaryEdit="0" left="0" path="include/tqt_uart.h" selected="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="105" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/libraries/util/app_util_platform.h" selected="0" top="83" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="163" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/libraries/uart/app_uart_fifo.c" selected="0" top="137" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="568" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/integration/nrfx/legacy/nrf_drv_uart.h" selected="0" top="550" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="355" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/modules/nrfx/drivers/src/nrfx_uarte.c" selected="0" top="342" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="256" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/modules/nrfx/drivers/nrfx_common.h" selected="0" top="240" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="81" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/boards/pca10040.h" selected="0" top="61" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="635" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/modules/nrfx/hal/nrf_gpio.h" selected="0" top="618" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="174" useTextEdit="1" useBinaryEdit="0" left="0" path="../../common/src/simple_hal.c" selected="0" top="140" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="217" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/boards/boards.c" selected="0" top="190" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="95" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/boards/boards.h" selected="0" top="81" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="1020" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../external/app_timer/app_timer_mesh.c" selected="0" top="1002" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="270" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/libraries/timer/app_timer.h" selected="0" top="250" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="20" y="573" useTextEdit="1" useBinaryEdit="0" left="0" path="src/main.c" selected="0" top="552" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../mesh/bearer/src/radio_config.c" selected="0" top="16" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="125" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../mesh/bearer/include/radio_config.h" selected="0" top="125" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../external/softdevice/s132_5.0.0/s132_nrf52_5.0.0_API/include/ble_gap.h" selected="0" top="1784" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="37" useTextEdit="1" useBinaryEdit="0" left="0" path="../../common/src/app_onoff.c" selected="0" top="24" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="118" useTextEdit="1" useBinaryEdit="0" left="0" path="../../common/src/app_error_weak.c" selected="0" top="111" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="32" y="121" useTextEdit="1" useBinaryEdit="0" left="0" path="src/tqt_uart.c" selected="0" top="102" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="60" y="3732" useTextEdit="1" useBinaryEdit="0" left="0" path="include/sdk_config.h" selected="0" top="3714" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="8" y="22" useTextEdit="1" useBinaryEdit="0" left="0" path="include/tqt_uart.h" selected="0" top="10" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="25" y="64" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/boards/pca10040.h" selected="0" top="71" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="303" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/modules/nrfx/drivers/include/nrfx_gpiote.h" selected="0" top="279" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="241" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/libraries/timer/app_timer.h" selected="0" top="220" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="75" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../mesh/bearer/src/mesh_pa_lna.c" selected="0" top="63" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="999" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../external/app_timer/app_timer_mesh.c" selected="0" top="975" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="57" useTextEdit="1" useBinaryEdit="0" left="0" path="../../common/include/mesh_app_utils.h" selected="0" top="51" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="157" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/libraries/util/sdk_errors.h" selected="0" top="145" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="247" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../mesh/core/include/log.h" selected="0" top="223" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="25" y="65" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/boards/custom_board.h" selected="1" top="70" codecName="Default"/>
  </Files>
- <ARMCrossStudioWindow activeProject="light_switch_server_nrf52832_xxAA_s132_6.1.0" fileDialogDefaultFilter="*.c" autoConnectTarget="J-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="" debugSearchPath="" autoConnectCapabilities="3199"/>
+ <ARMCrossStudioWindow activeProject="light_switch_server_nrf52832_xxAA_s132_6.1.0" fileDialogDefaultFilter="*.c" autoConnectTarget="J-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="E:/KLTN_Source_Git/nrf5SDKforMeshv310src/examples/light_switch/server/src" debugSearchPath="" autoConnectCapabilities="3711"/>
 </session>

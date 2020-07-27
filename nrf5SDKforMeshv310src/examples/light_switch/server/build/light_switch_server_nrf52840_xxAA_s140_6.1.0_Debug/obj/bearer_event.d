@@ -1,16 +1,16 @@
 build/light_switch_server_nrf52840_xxAA_s140_6.1.0_Debug/obj/bearer_event.o: \
- H:\KLTN_Source_Git\nrf5SDKforMeshv310src\mesh\core\src\bearer_event.c \
+ E:\KLTN_Source_Git\nrf5SDKforMeshv310src\mesh\core\src\bearer_event.c \
  ../../../../nrf5SDKforMeshv310src/mesh/core/include/bearer_event.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.30/include/stdint.h \
+ E:/Project/SEGGER/include/stdint.h \
  ../../../../nrf5SDKforMeshv310src/mesh/core/include/timer.h \
  ../../../../nrf5SDKforMeshv310src/mesh/core/include/timer_scheduler.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.30/include/stdbool.h \
+ E:/Project/SEGGER/include/stdbool.h \
  ../../../../nrf5SDKforMeshv310src/mesh/core/api/nrf_mesh_config_core.h \
  ../../../../nrf5SDKforMeshv310src/mesh/core/api/nrf_mesh_defines.h \
  ../../../../nrf5SDKforMeshv310src/examples/light_switch/server/include/nrf_mesh_config_app.h \
  ../../../../nrf5SDKforMeshv310src/mesh/core/include/queue.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.30/include/stddef.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.30/include/__crossworks.h \
+ E:/Project/SEGGER/include/stddef.h \
+ E:/Project/SEGGER/include/__crossworks.h \
  ../../../../nrf5SDKforMeshv310src/mesh/core/include/toolchain.h \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/modules/nrfx/mdk/nrf.h \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/modules/nrfx/mdk/nrf52840.h \
@@ -26,7 +26,7 @@ build/light_switch_server_nrf52840_xxAA_s140_6.1.0_Debug/obj/bearer_event.o: \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/modules/nrfx/mdk/compiler_abstraction.h \
  ../../../../nrf5SDKforMeshv310src/mesh/core/include/fifo.h \
  ../../../../nrf5SDKforMeshv310src/mesh/core/include/utils.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.30/include/string.h \
+ E:/Project/SEGGER/include/string.h \
  ../../../../nrf5SDKforMeshv310src/mesh/core/include/hal.h \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/libraries/util/app_util.h \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/modules/nrfx/mdk/compiler_abstraction.h \

@@ -1,12 +1,11 @@
 build/light_switch_server_nrf52840_xxAA_s140_6.1.0_Debug/obj/composition_data.o: \
- H:\KLTN_Source_Git\nrf5SDKforMeshv310src\models\foundation\config\src\composition_data.c \
+ E:\KLTN_Source_Git\nrf5SDKforMeshv310src\models\foundation\config\src\composition_data.c \
  ../../../../nrf5SDKforMeshv310src/models/foundation/config/include/composition_data.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.30/include/stdint.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.30/include/string.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.30/include/__crossworks.h \
+ E:/Project/SEGGER/include/stdint.h E:/Project/SEGGER/include/string.h \
+ E:/Project/SEGGER/include/__crossworks.h \
  ../../../../nrf5SDKforMeshv310src/mesh/access/api/access.h \
  ../../../../nrf5SDKforMeshv310src/mesh/access/api/device_state_manager.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.30/include/stdbool.h \
+ E:/Project/SEGGER/include/stdbool.h \
  ../../../../nrf5SDKforMeshv310src/mesh/core/api/nrf_mesh.h \
  ../../../../nrf5SDKforMeshv310src/mesh/core/include/timer.h \
  ../../../../nRF5SDK15209412b96/nRF5_SDK_15.2.0_9412b96/components/softdevice/s140/headers/ble.h \
