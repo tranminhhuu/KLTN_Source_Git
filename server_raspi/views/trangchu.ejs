@@ -1,0 +1,376 @@
+<html>
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"> -->
+
+<head>
+	<title>Mesh Lock Door</title>
+	<meta name="description" content="Mesh Lock Door" />
+	<script src='https://code.jquery.com/jquery-3.5.1.js'></script>
+	<script src='/socket.io/socket.io.js'></script>
+	<!-- <link type="text/css" rel="stylesheet" href="style.css" />
+	<link type="text/css" rel="stylesheet" href="normalize.css" /> -->
+	<link type="text/css" rel="stylesheet" href='/assets/normalize.css' />
+	<link type="text/css" rel="stylesheet" href='/assets/style.css' />
+	<script>
+		// goi dien len server
+		//var socket = io.connect('http://192.168.43.44:3000/');
+		//var socket = io.connect('http://192.168.137.146:3000/');
+		// var today = new Date();
+		// var date;
+		// var time;
+		// Test
+
+		// Test
+
+		var socket = io('https://meshlockdoor.herokuapp.com');
+		var global_door_current_status = false;
+		socket.on("Cookie_Fail", function () {
+			window.location.href = './login';
+		})
+
+		socket.on("Homepage_AddNew_Button_", function (data) {
+			for (let i = 0; i < data; i++) {
+				var id_provider_1 = "relay" + (i + 3) + "btn"
+				var id_provider_2 = "relay" + (i + 3)
+				var id_provider_3 = "Relay " + (i + 3)
+				const div = document.createElement('div');
+				div.className = 'column';
+				div.innerHTML = `
+			<h1 class="cover-heading tqt_new_relay"></h1>
+			<div class="onoffswitch tqt_new_relay" style="margin:0px auto;">
+			<div class="switch demo3">
+			<input name="tqt_" type="checkbox" id="relay3">
+			<label><i></i></label>
+			</div>
+			</div>
+			`;
+				document.getElementById("nodeState").appendChild(div);
+				document.getElementsByClassName("onoffswitch tqt_new_relay")[i].id = id_provider_1;
+				document.getElementsByName("tqt_")[i].id = id_provider_2;
+				document.getElementsByClassName("cover-heading tqt_new_relay")[i].innerHTML = id_provider_3;
+			}
+		})
+
+		socket.on("Back_To_Login", function () {
+			window.location.href = './login';
+		})
+
+		socket.on("Update_Mesh_Node_Status", function (data) {
+			RelayNodeStateChange(data.Relay1, 1);
+			RelayNodeStateChange(data.Relay2, 2);
+			RemoteNodeStateChange(data.Remote);
+			EndNodeAliveStateChange(data.EndNode);
+			RelayNodeStateChange(data.Relay3, 3);
+			RelayNodeStateChange(data.Relay4, 4);
+			RelayNodeStateChange(data.Relay5, 5);
+			RelayNodeStateChange(data.Relay6, 6);
+		})
+
+		socket.on("RemoteStateChange", function (data) {
+			RemoteNodeStateChange(data);
+		})
+
+		socket.on("ProvisionerAlive", function (data) {
+			ProvisionerNodeStateChange(data);
+		})
+
+		socket.on("LockStateChange", function (data) {
+			EndNodeStateChange(data);
+		})
+
+		// // // update log time
+		// socket.on("LockStateChangeTime", function (data) {
+		// 	alert(data);
+		// })
+		// // // update log time 
+
+		socket.on("EndnodeAlive", function (data) {
+			EndNodeAliveStateChange(data);
+		})
+
+		$(document).ready(function () {
+			var serverCheck = {
+				"type": "trangchu",
+				"username": getCookie("username"),
+				"cookie": getCookie("seasion")
+			}
+			socket.emit("from", serverCheck);
+			socket.emit("FirstLoadHomePage");
+
+			$('#doorstate').change(function () {
+				socket.emit("doorstateChanged", this.checked);
+			});
+
+			$('#btn_logout').click(function () {
+				socket.emit("Logout");
+			});
+
+			//modified S
+			$('#btnUpdateTime').click(function () {
+				alert('aaaaaa');
+				var data = document.getElementById("RentExTime").value;
+				socket.emit("Process_End_Date", $("#RentExTime").val());
+				alert("Thời gian hết hạn là: " + data);
+			});
+			$('#btnUpdateNodeStatus').click(function () {
+				alert('Updating Status');
+				socket.emit("MeshNetWorkStatusRequest");
+			})
+			//modified E
+		});
+
+		function myFunction() {
+			var node = document.createElement("div");
+			var textnode = document.createTextNode("Water");
+			node.appendChild(textnode);
+			document.getElementById("myList").appendChild(node);
+		}
+
+		function RemoteNodeStateChange(data) {
+			if (data == 1)
+				$('#remotenode').prop('checked', true);
+			else
+				$('#remotenode').prop('checked', false);
+			$("#remotenodebtn").click();
+		}
+
+		function ProvisionerNodeStateChange(data) {
+			if (data == 1)
+				$('#provisioner_btn').prop('checked', true);
+			else
+				$('#provisioner_btn').prop('checked', false);
+			$("#provisionerbtn").click();
+		}
+
+		function RelayNodeStateChange(data, relay_number) {
+			var relay_id_1 = '#relay' + relay_number;
+			var relay_id_2 = '#relay' + relay_number + 'btn';
+
+			if (data == 1) {
+				$(relay_id_1).prop('checked', true);
+			}
+			else {
+				$(relay_id_1).prop('checked', false);
+			}
+			$(relay_id_2).click();
+		}
+
+		function EndNodeStateChange(data) {
+			//updateTime();
+			//setInterval(updateTime, 1000);
+			global_door_current_status = data.lock_state;
+			console.log(data.DateU / data.lock_state);
+			if (data.lock_state == 1) {
+				$('#endnode').prop('checked', true);
+				$('#doorstate').prop('checked', true);
+				$("#listMessage").append("<div class='ms'>" + data.DateU + ": Door is Opened" + "</div>");
+			}
+			else {
+				$('#endnode').prop('checked', false)
+				$('#doorstate').prop('checked', false);
+			}
+			$("#endnodebtn").click();
+			$("#doorstatebtn").click();
+		}
+
+		function EndNodeAliveStateChange(data) {
+			if (data == 1)
+				$('#endnode_alive').prop('checked', true);
+			else
+				$('#endnode_alive').prop('checked', false)
+			$("#endnode_alive_btn").click();
+		}
+
+		function getCookie(name) {
+			var nameEQ = name + "=";
+			//alert(document.cookie);
+			var ca = document.cookie.split(';');
+			for (var i = 0; i < ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0) == ' ') c = c.substring(1);
+				if (c.indexOf(nameEQ) != -1) return c.substring(nameEQ.length, c.length);
+			}
+			return null;
+		}
+
+		// function updateTime() {
+		// 	var today = new Date();
+		// 	var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+		// 	var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+		// 	dateTime = date+' '+time;
+		// }
+
+		// function updateTime() {
+		// 	// var ts = Date.now();
+		// 	// var date_ob = new Date(ts);
+		// 	// var date = date_ob.getDate();
+		// 	// var month = date_ob.getMonth() + 1;
+		// 	// var year = date_ob.getFullYear();
+		// 	var today = new Date();
+		// 	var asiaTime = new Date().toLocaleString("en-US", { timeZone: "Asia/Ho_Chi_Minh" });
+		// 	// timelog = today.getHours()+ "h" +today.getMinutes()+ "m" + today.getSeconds();
+		// 	// dateTime = today.getDate()+ "d" +(today.getMonth()+1)+ "m" + today.getFullYear();
+		// 	timelog = today.getDate() + "d" + (today.getMonth() + 1) + "m" + today.getFullYear();
+		// 	dateTime = new Date(asiaTime).toISOString();
+		// 	// timelog = date;
+		// 	// dateTime = date + "/" month + year;
+		// }
+
+		function testF() {
+			//var x = document.getElementById("RentExTime").value;
+			// document.getElementById("demo").innerHTML = x
+			//alert(x);
+			alert("Đã lưu lại thời gian!");
+		}
+	</script>
+</head>
+
+<body>
+	<div id="header">
+		<div id="slogan">
+			<label for="Exdate">thời hạn: </label>
+			<input type="datetime-local" id="RentExTime">
+			<!-- <button name="buttonDate" value="OK" type="button" onclick="testF()">Click Here</button> -->
+			<input type="button" id="btnUpdateTime" value="Send" />
+		</div>
+	</div>
+	<div id="left">
+		<div id="container" class="col">
+			<div class="row">
+				<div id="lockstateBox" class="col">
+					<!-- <img src="/image/lock.png" alt="CSS"/> -->
+					<div class="onoffswitch" style="margin:0px auto;" id="endnodebtn">
+						<div class="switch demo3">
+						</div>
+					</div>
+				</div>
+				<div class='col'>
+					<input type="checkbox" id="endnode" disabled="disabled">
+				</div>
+				<div class="col">
+					<h1 class="cover-heading">Trạng thái khóa</h1>
+				</div>
+				<label><i></i></label>
+			</div>
+
+			<div class="row">
+				<div id="doorstateBox" class="col">
+					<!-- <img src="/image/door.png" alt="CSS"/>	 -->
+					<div class="onoffswitch" style="margin:0px auto;" , id="doorstatebtn">
+						<div class="switch demotqt">
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<input type="checkbox" id="doorstate">
+				</div>
+				<div class="col">
+					<h1 class="cover-heading">Đóng/Mở cửa</h1>
+				</div>
+				<label><i></i></label>
+			</div>
+
+			<div class="row">
+				<div id="provisionBox" class="col">
+					<!-- <img src="/image/provisioner.png" alt="CSS"/>	 -->
+					<div class="onoffswitch" style="margin:0px auto;" id="provisionerbtn">
+						<div class="switch demo3">
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<input type="checkbox" id="provisioner_btn" disabled="disabled">
+				</div>
+				<div class="col">
+					<h1 class="cover-heading">Provisioner</h1>
+				</div>
+				<label><i></i></label>
+			</div>
+
+			<div class="row">
+				<div id="relay1Box" class="col">
+					<!-- <img src="/image/relay.png" alt="CSS"/> -->
+					<div class="onoffswitch" style="margin:0px auto;" id="relay1btn">
+						<div class="switch demo3">
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<input type="checkbox" id="relay1" disabled="disabled">
+				</div>
+				<div class="col">
+					<h1 class="cover-heading">Relay 1</h1>
+				</div>
+				<label><i></i></label>
+			</div>
+
+			<div class="row">
+				<div id="relay2Box" class="col">
+					<!-- <img src="/image/relay.png" alt="CSS"/> -->
+					<div class="onoffswitch" style="margin:0px auto;" id="relay2btn">
+						<div class="switch demo3">
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<input type="checkbox" id="relay2" disabled="disabled">
+				</div>
+				<div class="col">
+					<h1 class="cover-heading">Relay 2</h1>
+				</div>
+				<label><i></i></label>
+			</div>
+
+			<div class="row">
+				<div id="endnodeBox" class="col">
+					<!-- <img src="/image/endnode.png" alt="CSS"/> -->
+					<div class="onoffswitch" style="margin:0px auto;" id="endnode_alive_btn">
+						<div class="switch demo3">
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<input type="checkbox" id="endnode_alive" disabled="disabled">
+				</div>
+				<div class="col">
+					<h1 class="cover-heading">Lock node</h1>
+				</div>
+				<label><i></i></label>
+			</div>
+
+			<div class="row">
+				<div id="remoteBox" class="col">
+					<!-- <img src="/image/remote.png" alt="CSS"/> -->
+					<div class="onoffswitch" style="margin:0px auto;" id="remotebtn">
+						<div class="switch demo3">
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<input type="checkbox" id="remotenode" disabled="disabled">
+				</div>
+				<div class="col">
+					<h1 class="cover-heading">Remote</h1>
+				</div>
+				<label><i></i></label>
+			</div>
+
+			<div class="row" id="nodeState"></div>
+			<input type="button" id="btnUpdateNodeStatus" value="Check" />
+			<!-- <button id="btn_logout" class="button logoutbtn"><a href='./login'>Logout</a></button> -->
+			<!-- <button id="btn_update_mesh_stt" class="btn-tqt">Update Mesh Status</button> -->
+			<!-- <input type="Button" value="Create File" onClick='createFile()'> -->
+		</div>
+	</div>
+	<div id="right">
+		<div id="listMessage"></div>
+	</div>
+
+	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
